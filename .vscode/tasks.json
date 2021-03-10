@@ -1,0 +1,48 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "Build",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-gdwarf",
+                "-D_GLIBCXX_USE_CXX11_ABI=0",
+                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/Classes/*/*.cpp",
+                "${workspaceFolder}/Classes/*/*/*.cpp",
+                "-o",
+                "${workspaceFolder}/Build/Zork"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "Tâche générée par le débogueur."
+        },
+        {
+            "type": "cppbuild",
+            "label": "Test",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/Tests/Utils/*.cpp",
+                "${workspaceFolder}/Tests/main.cpp",
+                "${workspaceFolder}/Classes/*.cpp",
+                "-o",
+                "${workspaceFolder}/Build/Test"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "Tâche générée par le débogueur."
+        }
+    ],
+    "version": "2.0.0"
+}
